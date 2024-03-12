@@ -10,7 +10,7 @@ The main parts of the project are:
 
 - The contract (this page)
 - The deployment scripts in [scripts](./scripts)
-- A basic CLI client application to send and receive Terra/Luna as well as interact with the deployed contract: [multisender-client](./multisender-client)
+- A basic CLI client application to send and receive  as well as interact with the deployed contract: [multisender-client](./multisender-client)
 
 Each part has its own README and instructions
 
@@ -31,16 +31,12 @@ rustup default stable
 rustup target add wasm32-unknown-unknown
 ```
 
-For further details, consult the official Terra [documentation](https://docs.terra.money/contracts/tutorial/setup.html#install-terra-core-locally) for setting up the environment.
-
-As a live test environment, it is recommended to use [LocalTerra](https://github.com/terra-project/LocalTerra). Follow the installation process of LocalTerra in the link
-
 ## Building the contract
 
 Clone the contract to a new environment.
 
 ```
-git clone https://github.com/ZenGo-X/terra-multisend.git
+git clone https://github.com/DSHIVAAY-23/CosmWasm-multisender.git
 ```
 
 Make sure the project compiles by running
@@ -60,11 +56,10 @@ docker run --rm -v "$(pwd)":/code \
 
 More instructions on building and developing the contract in [Developing](./Developing.md)
 
-Once the contract is compiled, go to [scripts](./scripts) to deploy the contract using `Terra.js`
 
 ## Contract use cases and limitations
 
-The Terra blockchain supports sending multiple payments simultaneously via a `MsgMultiSend`. Still, the contract could be useful for several use cases:
+The contract supports sending multiple payments simultaneously via a `MsgMultiSend`. Still, the contract could be useful for several use cases:
 
 - Integration with other smart contracts
 - Sending ERC20/CW20 tokens (in future versions)
@@ -72,14 +67,7 @@ The Terra blockchain supports sending multiple payments simultaneously via a `Ms
 
 The contract can be also easily extended to perform additional tasks, such as swapping tokens to the required coin etc.
 
-## Contract Demo
 
-In the demo, the contract sends a batch of transactors to the addresses specified in the CSV.
-The The address of sending address gets funds removed, and added to the specified addresses.
-This is easy to practice in LocalTerra, as it several addresses with funds for testing.
-Do not use these addresses in production
-
-![demon](./assets/demo.gif)
 
 ## Misc
 
