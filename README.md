@@ -2,11 +2,10 @@
 
 This is a multisend smart contracts in Rust built to run on
 [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) module on all chains that enable it.
-The project was built and tested for the Terra network.
 
 ## What it does
 
-This project covers all that is required to build, deploy and interact with the smart contract on the Terra blockchain.
+This project covers all that is required to build, deploy and interact with the smart contract .
 The main parts of the project are:
 
 - The contract (this page)
